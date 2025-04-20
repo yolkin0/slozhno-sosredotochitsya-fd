@@ -1,5 +1,220 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-color: transparent;
+  background-image: url(./../images/cover-image-dark.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+  padding-block: 20px;
+  padding-inline: 10px;
+  height: 100vh;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);  
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);  
+}
+
+.header__rec-decoration {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1;
+}
+
+.header__rec-decoration::before {
+  content: "REC";
+}
+
+.header__rec-decoration::after {
+  content: "";  
+  width: 9px;
+  height: 9px;
+  background-color: currentColor;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px currentColor;
+}
+
+.header__theme-menu {
+  justify-items: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  /*border: none;*/
+  border: 1px solid transparent;
+  color: var(--accent-color);
+  text-transform: lowercase;
+  line-height: 100%;
+  font-size: inherit;
+  height: calc(26 / 18 * 1em);  
+}
+
+.header__theme-menu-button:enabled {
+  cursor: pointer;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;  
+  box-shadow: 0 1px 0 0 currentColor;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--header-menu-button-hover-color);
+
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  color: var(--header-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  /*padding-block: 0.5em;*/
+  font-weight: 700;
+}
+
+.header__text {  
+  font-weight: 700;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+}
+
+.main {
+  padding-inline: 10px;
+  padding-block: 20px;
+}
+
+.main__section {
+  padding-block-end: 10px;
+}
+
+.main__section-title {
+  color: var(--accent-color);
+  font-size: var(--main-font-size);
+  font-weight: 700;  
+  padding-block-start: 40px;
+}
+
+.main__section-text-subtitle {
+  font-size: var(--main-font-size);
+  font-weight: 700;
+  margin-block-start: 20px;
+  margin-block-end: 10px;
+}
+
+.main__section-link {
+  position: relative;
+  text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
+}
+
+.main__section-link:focus {
+  outline: none;
+}
+
+.main__section-link:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 1px;
+}
+
+/*.main__section-link:hover {
+  
+  text-decoration-line: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}*/
+.main__section-link:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0; /*0.1em;*/
+  height: 1px;
+  width: 100%;
+  background-color: currentColor;
+}
+
+
+.title-regular {
+  font-weight: 400;
+}
+
+.main__section-text-paragraph {
+  color: var(--text-color);
+  line-height: 135%;
+}
+
+.main__section-images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.main__section-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  color: var(--header-color);
+  text-shadow: 2px 2px 0 var(--accent-color);  
+  font-weight: 700;
 }
