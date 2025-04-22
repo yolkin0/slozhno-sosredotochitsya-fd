@@ -6,6 +6,7 @@
 
 :root.theme-dark {
   --bg-image-url: url(./../images/cover-image-dark.png);
+  --bg-reserve-color: #000028;
   --header-color: #db00ff;
   --accent-color: #ff0070;
   --menu-button-color: #ff0070;
@@ -17,6 +18,7 @@
 
 .theme-dark .page {
   --bg-image-url: url(./../images/cover-image-dark.png);
+  --bg-reserve-color: #000028;
   --header-color: #db00ff;
   --accent-color: #ff0070;
   --menu-button-color: #ff0070;
@@ -24,4 +26,8 @@
   --text-color: #f1b2ce;
   --small-header-color: #ff0070;
   --medium-header-color: #000028;
+}
+
+.theme-dark .header__rec-decoration {
+  display: flex;
 }

@@ -1,5 +1,5 @@
 .page {
-  background-color: transparent;
+  background-color: var(--bg-reserve-color);
   background-image: var(--bg-image-url);
   background-repeat: no-repeat;
   background-position: center;
