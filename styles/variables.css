@@ -13,5 +13,4 @@
   --header-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --header-menu-button-hover-color: rgba(255, 0, 112, 0.4);
   --padding-basic: 10px;
-  --header-padding-block: 30px;
 }
