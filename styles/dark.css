@@ -1,9 +1,3 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-dark {
   --bg-image-url: url(./../images/cover-image-dark.png);
   --bg-reserve-color: #000028;
@@ -14,20 +8,6 @@
   --text-color: #f1b2ce;
   --small-header-color: #ff0070;
   --medium-header-color: #000028;
-}
-
-.theme-dark .page {
-  --bg-image-url: url(./../images/cover-image-dark.png);
-  --bg-reserve-color: #000028;
-  --header-color: #db00ff;
-  --accent-color: #ff0070;
-  --menu-button-color: #ff0070;
-  --decorated-corners-color: #ff0070;
-  --text-color: #f1b2ce;
-  --small-header-color: #ff0070;
-  --medium-header-color: #000028;
-}
-
-.theme-dark .header__rec-decoration {
-  display: flex;
+  --header-menu-button-hover-color: rgba(255, 0, 112, 0.4);
+  --header-decoration-visibility: visible;
 }
